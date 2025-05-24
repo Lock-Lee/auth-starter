@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   experimental: {
-    appDir: true, // สำหรับ App Router
+    appDir: true,
   },
   pageExtensions: ['tsx', 'ts'],
 };

@@ -7,7 +7,7 @@ type User = {
   id: string;
   email: string;
   name: string;
-  image?: string | null; // แก้ตรงนี้ ให้รองรับได้
+  image?: string | null;
   emailVerified: boolean;
   createdAt: string | Date;
   updatedAt: string | Date;

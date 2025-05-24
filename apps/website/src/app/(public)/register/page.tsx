@@ -12,7 +12,6 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { authClient } from '@/app/lib/auth-client';
 
-// 1. Define schema with confirmPassword validation
 const registerSchema = z
   .object({
     name: z.string().min(2, { message: 'Name is required' }),
