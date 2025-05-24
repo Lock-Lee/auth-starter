@@ -1,0 +1,8 @@
+apps/api/dist
+apps/api/node_modules
+
+apps/website/.next
+apps/website/node_modules
+
+node_modules
+.env*

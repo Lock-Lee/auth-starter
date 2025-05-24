@@ -1,0 +1,22 @@
+{
+  "name": "nextjs-express-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "bun script.js dev",
+    "build": "bun script.js build",
+    "lint": "bun script.js lint"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.3"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "bun@1.2.9"
+}

@@ -1,0 +1,44 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+*.lcov
+
+# next.js
+/.next
+/out
+
+# production
+/out
+/dist
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# IntelliJ based IDEs
+.idea
+
+# debug
+logs
+.log
+report.[0-9].[0-9].[0-9].[0-9]_.json
+
+# caches
+.eslintcache
+.cache
+*.tsbuildinfo
+
+# vercel
+.vercel
+
+/*.trace
+/.zip
+**/.tar.gz
+/*.tgz
+/.log
+**/.bun
