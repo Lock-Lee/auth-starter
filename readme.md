@@ -14,12 +14,47 @@
 
 ### 1. Clone Repo
 
-```bash
+````bash
 git clone <repo-url>
 
 cd <project-folder>
 
 bun install
+```
+
+##### for prodution
+```bash
+docker compose -f 'docker-compose.yml' up -d --build
+````
+
+##### Frontend
+
+```bash
+http://localhost:3000
+```
+
+##### Backend
+
+```bash
+http://localhost:3001/
+```
+
+##### Data For login
+
+```
+ {
+    name: 'Alice',
+    email: 'alice@example.com',
+    password: 'password123',
+  },
+  {
+    name: 'Bob',
+    email: 'bob@example.com',
+    password: 'password123',
+  },
+```
+
+```bash
 #Scripts
 "postinstall": "prisma generate",
 "dev": "bun run --watch src/index.ts",
@@ -36,42 +71,12 @@ bun install
 "db:studio": "prisma studio"
 ```
 
-##### for prodution
-
-```bash
-docker compose -f 'docker-compose.yml' up -d --build
-```
-
-##### Frontend
-
-```bash
-http://localhost:3000
-```
-
-##### Backend
-
-```bash
-http://localhost:3001/
-```
-##### Data For login 
-```
- {
-    name: 'Alice',
-    email: 'alice@example.com',
-    password: 'password123',
-  },
-  {
-    name: 'Bob',
-    email: 'bob@example.com',
-    password: 'password123',
-  },
-```
+````
 
 ##### API Document
 
 ```bash
 http://localhost:3001/docs
-```
+````
+
 <img width="1437" alt="Screenshot 2568-05-25 at 03 24 33" src="https://github.com/user-attachments/assets/912f0636-88cd-46dc-956d-30d8193eeb73" />
-
-
