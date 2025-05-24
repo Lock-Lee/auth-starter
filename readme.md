@@ -3,7 +3,7 @@
 โครงสร้างโปรเจกต์แบบ **Monorepo** ที่ประกอบด้วย:
 
 - **Frontend**: [Next.js](https://nextjs.org/) + [Tailwind CSS](https://tailwindcss.com/) + [React Hook Form](https://react-hook-form.com/) + [shadcn/ui](https://ui.shadcn.com/)
-- **Backend**: [Elysia](https://elysiajs.com/)
+- **Backend**: [Elysia](https://elysiajs.com/) + [better-auth](https://github.com/SaltyAom/better-auth)
 - **Database**: [PostgreSQL](https://www.postgresql.org/) (ผ่าน Docker)
 - **ORM**: [Prisma](https://www.prisma.io/)
 - **Runtime**: [Bun](https://bun.sh/)
