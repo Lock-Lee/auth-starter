@@ -8,9 +8,8 @@ type UserCreateInput = {
   password: string;
 };
 
-export const userRoute = new Elysia({ prefix: '/users', auth: true, name: 'user-route' })
+export const userRoute = new Elysia({ prefix: '/users', name: 'user-route' })
 
-  // Get all users
   .get('/', async () => await prisma.user.findMany(), {
     auth: true,
     detail: {
@@ -24,7 +23,6 @@ export const userRoute = new Elysia({ prefix: '/users', auth: true, name: 'user-
     },
   })
 
-  // Get user by ID
   .get(
     '/:id',
     async ({ params }) => {
@@ -55,7 +53,6 @@ export const userRoute = new Elysia({ prefix: '/users', auth: true, name: 'user-
     }
   )
 
-  // Create a new user
   .post(
     '/',
     async ({ body }: { body: UserCreateInput }) => {
@@ -94,7 +91,6 @@ export const userRoute = new Elysia({ prefix: '/users', auth: true, name: 'user-
     }
   )
 
-  // Update user name
   .put(
     '/:id',
     async ({ params, body }: { params: { id: string }; body: { name: string } }) => {
@@ -134,7 +130,6 @@ export const userRoute = new Elysia({ prefix: '/users', auth: true, name: 'user-
     }
   )
 
-  // Delete user
   .delete(
     '/:id',
     async ({ params }) => {
