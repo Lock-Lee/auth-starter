@@ -53,9 +53,24 @@ http://localhost:3000
 ```bash
 http://localhost:3001/
 ```
+```
+ {
+    name: 'Alice',
+    email: 'alice@example.com',
+    password: 'password123',
+  },
+  {
+    name: 'Bob',
+    email: 'bob@example.com',
+    password: 'password123',
+  },
+```
 
 ##### API Document
 
 ```bash
 http://localhost:3001/docs
-```
+
+```<img width="1437" alt="Screenshot 2568-05-25 at 03 24 33" src="https://github.com/user-attachments/assets/912f0636-88cd-46dc-956d-30d8193eeb73" />
+
+
