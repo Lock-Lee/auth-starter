@@ -8,7 +8,11 @@
 - **ORM**: [Prisma](https://www.prisma.io/)
 - **Runtime**: [Bun](https://bun.sh/)
 
---
+---
+
+## 🚀 เริ่มต้นใช้งาน
+
+### 1. Clone Repo
 
 ```bash
 git clone <repo-url>
@@ -16,7 +20,7 @@ git clone <repo-url>
 cd <project-folder>
 
 bun install
-
+#Scripts
 "postinstall": "prisma generate",
 "dev": "bun run --watch src/index.ts",
 "build": "bun run ./build.ts",
@@ -32,24 +36,26 @@ bun install
 "db:studio": "prisma studio"
 ```
 
+##### for prodution
+
 ```bash
-#for prodution
 docker compose -f 'docker-compose.yml' up -d --build
 ```
 
+##### Frontend
+
 ```bash
-#Frontend
 http://localhost:3000
 ```
 
+##### Backend
+
 ```bash
-#Backend
 http://localhost:3001/
 ```
 
+##### API Document
+
 ```bash
-#API Document
 http://localhost:3001/docs
 ```
-
-## 📁 โครงสร้างโปรเจกต์
