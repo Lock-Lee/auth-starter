@@ -3,6 +3,7 @@ import swagger from '@elysiajs/swagger';
 import { Elysia } from 'elysia';
 import { auth, authOpenAPI } from '@/libs/auth';
 import cors from '@elysiajs/cors';
+import { userRoute } from './libs/users';
 
 const PORT = process.env.PORT || 3001;
 
@@ -45,11 +46,12 @@ const app = new Elysia()
   .get('/', async () => {
     const openAPISchema = await auth.api.generateOpenAPISchema();
     console.log(openAPISchema);
-    return { data: 'test' };
   })
-  .get('/user', ({ user }) => user, {
+  .get('/profile', ({ user }) => user, {
     auth: true,
   })
+
+  .use(userRoute)
   .use(
     swagger({
       documentation: {
