@@ -14,7 +14,7 @@
 
 ### 1. Clone Repo
 
-````bash
+```bash
 git clone <repo-url>
 
 cd <project-folder>
@@ -22,10 +22,18 @@ cd <project-folder>
 bun install
 ```
 
+#### 2. Seed Database
+
+```bash
+cd apps/api/
+bun run db:reset
+```
+
 ##### for prodution
+
 ```bash
 docker compose -f 'docker-compose.yml' up -d --build
-````
+```
 
 ##### Frontend
 
