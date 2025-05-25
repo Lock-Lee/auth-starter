@@ -25,8 +25,7 @@ bun install
 #### 2. Seed Database
 
 ```bash
-cd apps/api/
-bun run db:reset
+cd apps/api/ && bun run db:reset && cd ../..
 ```
 
 ##### for prodution
