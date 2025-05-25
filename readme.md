@@ -14,18 +14,41 @@
 
 ### 1. Clone Repo
 
-````bash
+```bash
 git clone <repo-url>
 
 cd <project-folder>
+```
 
+### 2. bun install
+
+```bash
+bun install
+```
+
+### 3.setup env api : rename /apps/api .env.example to .env
+
+```bash
+bun install
+```
+
+### 4.setup env fontend : rename /apps/website .env.example to .env
+
+```bash
 bun install
 ```
 
 ##### for prodution
+
 ```bash
 docker compose -f 'docker-compose.yml' up -d --build
-````
+```
+
+##### for Closed
+
+```bash
+docker compose -f 'docker-compose.yml' down
+```
 
 ##### Frontend
 
