@@ -12,10 +12,8 @@ services:
       - PORT=3001
       - BETTER_AUTH_SECRET=${BETTER_AUTH_SECRET:-some-secret}
       - NODE_ENV=${NODE_ENV:-development}
-      - DATABASE_URL=postgres://postgres:postgres@db:5432/postgres
+      - DATABASE_URL=postgresql://postgres:postgres@db:5432/public?sslmode=disable
     restart: unless-stopped
-    networks:
-      - app-network
     depends_on:
       - db
 
@@ -34,8 +32,6 @@ services:
     restart: unless-stopped
     depends_on:
       - api
-    networks:
-      - app-network
 
   db:
     image: postgres:14
@@ -47,15 +43,8 @@ services:
       POSTGRES_DB: postgres
     volumes:
       - postgres-data:/var/lib/postgresql/data
-    networks:
-      - app-network
     ports:
       - '5432:5432'
-
-networks:
-  app-network:
-    driver: bridge
-    name: app-network
 
 volumes:
   postgres-data:

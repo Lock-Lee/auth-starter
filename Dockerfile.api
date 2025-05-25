@@ -6,16 +6,17 @@ RUN bun install
 RUN bun run --cwd apps/api build
 
 # Build the production image
-FROM gcr.io/distroless/base
+FROM imbios/bun-node:latest-20-alpine
 WORKDIR /app
 
 # Copy necessary files from the builder stage
-COPY --from=builder --chmod=755 /app/apps/api/dist/server server
+COPY --from=builder --chmod=755 /app/apps/api/dist/server.js server.js
+COPY --from=builder --chmod=755 /app/apps/api/prisma-generated prisma-generated
 
 ENV NODE_ENV=production
 ARG PORT=3001
 ENV PORT=${PORT}
 EXPOSE $PORT
 
-CMD ["./server"]
+CMD ["bun", "server.js"]
 

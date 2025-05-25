@@ -37,5 +37,5 @@ next-env.d.ts
 !.env.example
 
 # prisma
-/src/libs/prisma/generated
+/prisma-generated
 /prisma/db

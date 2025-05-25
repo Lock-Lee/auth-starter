@@ -2,8 +2,6 @@
 import { spawn } from 'bun';
 import { platform } from 'os';
 
-import pkg from './package.json';
-
 type BuildStep = {
   command: string[];
   name: string;
@@ -22,12 +20,12 @@ const BUILD_STEPS: BuildStep[] = [
       'bun',
       'build',
       './src/index.ts',
-      '--compile',
-      '--minify',
+      '--minify-whitespace',
+      '--minify-syntax',
       '--target',
       'bun',
       '--outfile',
-      `${OUT_DIR}/${pkg.name}`,
+      './dist/server.js',
     ],
     name: 'Building',
   },
